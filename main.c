@@ -77,7 +77,6 @@ int main()
 
         printf("\n\n\n\n%s", dots); // Print the stars string (i.e: h*ll* for hello).
 
-<<<<<<< HEAD
 	    printf("\n\nGuess a letter or word:");			//Have the user guess a letter.
          fgets(guess_word, 20, stdin);
         if (strlen(guess_word) > 1)
@@ -101,24 +100,11 @@ int main()
                 dots[i]=guess_word[0];		    		//If the guess is correct, replace it in the stars string.
                 trigger++;			   	//If a character the user entered matches one of the initial word, change the trigger to a non zero value.
                 wincounter++;		    		//Increase the number of correct guesses.
-=======
-        printf("\n\nGuess a letter:"); // Have the user guess a letter.
-        scanf(" %c", &guess_letter);
-
-        for (i = 0; i < len; i++) // Run through the string checking the characters.
-        {
-            if (word[i] == guess_letter)
-            {
-                dots[i] = guess_letter; // If the guess is correct, replace it in the stars string.
-                trigger++;              // If a character the user entered matches one of the initial word, change the trigger to a non zero value.
-                wincounter++;           // Increase the number of correct guesses.
->>>>>>> d5865e72af67b378169a0d34a6ff2e8b222f5119
             }
         }
 
         if (trigger == 0)
         {
-<<<<<<< HEAD
             wrong_letters[strikes] = guess_word[0];
             strikes++;				    	//If the trigger is not a non zero value, increase the strikes counter because that means that the user input character didn't match any character of the word.
         printf("Wrong letters are : ");
@@ -127,16 +113,6 @@ int main()
            printf("%c ", wrong_letters[i]);
         }
         
-=======
-            printf(hangman[strikes]);
-            wrong_letters[strikes] = guess_letter;
-            strikes++; // If the trigger is not a non zero value, increase the strikes counter because that means that the user input character didn't match any character of the word.
-            printf("Wrong letters are : ");
-            for (int i = 0; i < strikes; i++)
-            {
-                printf("%c ", wrong_letters[i]);
-            }
->>>>>>> d5865e72af67b378169a0d34a6ff2e8b222f5119
         }
 
         trigger = 0; // Set the trigger to 0 again so the user can guess a new character.
