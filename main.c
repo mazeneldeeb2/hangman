@@ -78,7 +78,7 @@ int main()
         
         for(i=0; i<len; i++)            		//Run through the string checking the characters.
         {
-            if(word[i]==guess_word)
+            if(word[i]==guess_word[0])
             {
                 dots[i]=guess_word[0];		    		//If the guess is correct, replace it in the stars string.
                 trigger++;			   	//If a character the user entered matches one of the initial word, change the trigger to a non zero value.
