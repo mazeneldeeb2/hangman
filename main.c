@@ -6,7 +6,7 @@ char *hangman[] = {"\n       \n       \n       \n       \n       \n       \n====
 
 int main()
 {
-<<<<<<< HEAD
+
     char* words[10] = {"one", "hello", "dogs", "eldeeb", "ramadan", "elnady","one", "hello", "dogs", "eldeeb"}; // set of words
     int random; // random number entered by user to get random word from set of words
     
@@ -19,19 +19,6 @@ int main()
     int trigger = 0;			//The trigger variable serves as a flag in the for loops bellow.
     int wincounter=0;			//wincounter keeps track of the number of correct guesses.
     int i;				//Another counter variable to be used in for loops.
-=======
-    char *words[10] = {"one", "hello", "dogs", "eldeeb", "ramadan", "elnady", "one", "hello", "dogs", "eldeeb"}; // set of words
-    int random;                                                                                                  // random number entered by user to get random word from set of words
->>>>>>> d5865e72af67b378169a0d34a6ff2e8b222f5119
-
-    char *word;             // Used to store the user word. Most words are less than 20 characters so the default size is 20.
-    char wrong_letters[10]; // to keep track of each wrong letter entered by user
-    int len;                // len is the length of the word entered.
-    char guess_letter;      // ch is a temporary character variable.
-    int strikes = 0;        // strikes counts how many wrong characters the user has guessed.
-    int trigger = 0;        // The trigger variable serves as a flag in the for loops bellow.
-    int wincounter = 0;     // wincounter keeps track of the number of correct guesses.
-    int i;                  // Another counter variable to be used in for loops.
 
     printf("Enter random number from 1 to 10: ");
     scanf("%d", &random);
@@ -43,14 +30,11 @@ int main()
     char dots[len]; // A string full of * that are replaced upon the user entering the right letter of the word.
     // Fill the stars string with * according to the input word length (len)
 
-<<<<<<< HEAD
     char dots[len];			//A string full of . that are replaced upon the user entering the right letter of the word.
     //Fill the stars string with . according to the input word length (len)
     
     for(int counter=0; counter<len; counter++)
-=======
     for (int counter = 0; counter < len; counter++)
->>>>>>> d5865e72af67b378169a0d34a6ff2e8b222f5119
     {
         dots[counter] = '.';
     }
