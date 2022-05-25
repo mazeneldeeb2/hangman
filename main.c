@@ -49,7 +49,7 @@ int main()
             dots[counter] = '.';
         }
 
-    dots[len] = '\0'; // Insert the terminating string character at the end of the stars string.
+    dots[len] = '\0'; // Insert the terminating string character at the end of the dots string.
 
     // Enter main program loop where guessing and checking happens. this condition is for length of the word + 10 strike characters.
     for (int counter = 0; counter < len + 10; counter++)
