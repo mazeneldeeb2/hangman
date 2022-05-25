@@ -26,7 +26,7 @@ int main()
     {
         printf("Enter random number from 1 to 10: ");
         scanf("%d", &random);
-        getchar();
+        getchar(); //clear the newline from input stream
     } while (!( random >= 1 && random <= 10));
     
     
@@ -82,6 +82,14 @@ int main()
             }
 
             return 0;
+        }
+
+        char* p = dots; //temporary pointer variable to be used in searching
+        for (i = 0; p[i]; p[i] == guess_word[0] ? i++ : p++); //search for occurence of the guess letter
+        if(i) //if found, skip
+        {
+            counter--;
+            continue;
         }
 
         for (i = 0; i < len; i++) // Run through the string checking the characters.
