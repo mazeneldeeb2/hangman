@@ -69,7 +69,7 @@ int main()
             break;
         }
 
-        printf("\n\n\n\n%s", dots); // Print the stars string (i.e: h*ll* for hello).
+        printf("\n\n\n\n%s", dots); // Print the dots string (i.e: h.ll. for hello).
 
         printf("\n\nGuess a letter or word: "); // Have the user guess a letter.
         fgets(guess_word, 20, stdin);
@@ -92,7 +92,7 @@ int main()
         {
             if (word[i] == guess_word[0])
             {
-                dots[i] = guess_word[0]; // If the guess is correct, replace it in the stars string.
+                dots[i] = guess_word[0]; // If the guess is correct, replace it in the dotsdx string.
                 trigger++;               // If a character the user entered matches one of the initial word, change the trigger to a non zero value.
                 wincounter++;            // Increase the number of correct guesses.
             }
