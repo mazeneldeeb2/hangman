@@ -22,6 +22,8 @@ int main()
     int i;                  // Another counter variable to be used in for loops.
 
     
+    // to make sure the user inputs integer "not a character" between 1 and 10.
+    
     do
     {
         printf("Enter random number from 1 to 10: ");
@@ -32,7 +34,7 @@ int main()
     
    
 
-    word = words[random-1];
+    word = words[random-1]; // to take number which was entered by the user and decrement it to use it in the array.
 
     len = strlen(word); // Make len equal to the length of the word.
 
@@ -69,6 +71,8 @@ int main()
 
         printf("\n\nGuess a letter or word: "); // Have the user guess a letter.
         fgets(guess_word, 20, stdin);
+        
+        // to check if user input character or word to proceed as the input is.
         if (strlen(guess_word) > 2)
         {
             if (!strncmp(word, guess_word, strlen(word)))
