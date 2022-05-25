@@ -7,6 +7,7 @@ void welcome_player ();
 
 int main()
 {
+    welcome_player ();
     
     char *words[10] = {"one", "hello", "dogs", "eldeeb", "ramadan", "elnady", "one", "hello", "dogs", "eldeeb"}; // set of words
     int random;                                                                                                  // random number entered by user to get random word from set of words
