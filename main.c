@@ -75,6 +75,8 @@ int main()
 
         printf("\n\nGuess a letter or word: "); // Have the user guess a letter.
         fgets(guess_word, 20, stdin);
+        
+        // to check if user input character or word to proceed as the input is.
         if (strlen(guess_word) > 2)
         {
             if (!strncmp(word, guess_word, strlen(word)))
