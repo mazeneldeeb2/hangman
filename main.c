@@ -13,7 +13,8 @@ int main()
     int random;                                                                                                  // random number entered by user to get random word from set of words
 
     char *word;             // Used to store the user word. Most words are less than 20 characters so the default size is 20.
-    char wrong_letters[10]; // to keep track of each wrong letter entered by user
+    char wrong_letters[11]; // to keep track of each wrong letter entered by user
+    wrong_letters[10] = 0;  //null terminator
     int len;                // len is the length of the word entered.
     char guess_word[20];    // ch is a temporary character variable.
     int strikes = 0;        // strikes counts how many wrong characters the user has guessed.
@@ -104,9 +105,19 @@ int main()
 
         if (trigger == 0)
         {
-            printf(hangman[strikes]);
-            wrong_letters[strikes] = guess_word[0];
-            strikes++; // If the trigger is not a non zero value, increase the strikes counter because that means that the user input character didn't match any character of the word.
+            p = wrong_letters; //temporary pointer variable to be used in searching
+            for (i = 0; p[i]; p[i] == guess_word[0] ? i++ : p++); //search for occurence of the wrong letter
+            if(!i) //if not found, count an additional strike
+            {
+                printf(hangman[strikes]);
+                wrong_letters[strikes] = guess_word[0];
+                strikes++; // If the trigger is not a non zero value, increase the strikes counter because that means that the user input character didn't match any character of the word.
+            }
+            else
+            {
+                printf(hangman[strikes - 1]);
+                counter--;
+            }
             printf("Wrong letters are: ");
             for (int i = 0; i < strikes; i++)
             {
